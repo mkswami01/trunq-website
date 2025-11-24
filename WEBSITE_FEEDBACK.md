@@ -82,7 +82,98 @@ This shows:
 - Exception awareness ✓
 - Proactive suggestion ✓
 
-### 5. Minor Polish Items
+### 5. THE BIG PICTURE IS MISSING (Critical)
+
+**Problem:** The demo shows individual interactions but NOT how Trunq fits into someone's life. Users don't understand:
+- Where did all this data COME FROM?
+- When did I tell Trunq about mom's birthday?
+- How does it know Mike recommended a podcast?
+- When do I actually USE this throughout my day?
+
+**The demo shows HOW Trunq works, but not WHY someone would need it.**
+
+#### The Missing Narrative: "A Day With Trunq"
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                     A DAY WITH TRUNQ                            │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  🚿 SHOWER (7am)                                                │
+│     "Oh! I need to call mom about her birthday"                 │
+│     → Trunq captures it                                         │
+│                                                                 │
+│  🚶 WALKING TO CAR (8am)                                        │
+│     "Sarah mentioned a good podcast... How I Built This"        │
+│     → Trunq captures it                                         │
+│                                                                 │
+│  🍳 COOKING DINNER (6pm)                                        │
+│     "I should clean the garage this weekend"                    │
+│     → Trunq captures it (again... 4th time)                     │
+│                                                                 │
+│  ════════════════════════════════════════════════════════════   │
+│                                                                 │
+│  🚗 DRIVING NEXT DAY (9am)                                      │
+│     "Hey Trunq, I'm driving"                                    │
+│     → "You have 3 calls. Mom is overdue 3 days.                 │
+│        Also, Mike's podcast recommendation - 45 min."           │
+│                                                                 │
+│  😰 SUNDAY EVENING                                              │
+│     "What am I avoiding?"                                       │
+│     → "You've mentioned the garage 4 times but never did it"    │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+#### Recommended: Add "Life Timeline" Section
+
+Show the **journey** before or instead of the phone demo:
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│                                                                  │
+│   Your thoughts happen everywhere.                               │
+│   Trunq catches them all.                                        │
+│                                                                  │
+│   ┌─────┐     ┌─────┐     ┌─────┐     ┌─────┐     ┌─────┐      │
+│   │ 🚿  │ ──→ │ 🚶  │ ──→ │ 🍳  │ ──→ │ 🛋️  │ ──→ │ 🚗  │      │
+│   │     │     │     │     │     │     │     │     │     │      │
+│   │Shower│     │Walk │     │Cook │     │Couch│     │Drive│      │
+│   └─────┘     └─────┘     └─────┘     └─────┘     └─────┘      │
+│   "call mom"  "podcast"   "garage"    "gift"     "I'm driving" │
+│                                                                  │
+│                              ↓                                   │
+│                                                                  │
+│                    ┌─────────────────┐                          │
+│                    │   TRUNQ KNOWS   │                          │
+│                    │   EVERYTHING    │                          │
+│                    └─────────────────┘                          │
+│                              ↓                                   │
+│                                                                  │
+│    "You have 3 calls. Mom is overdue. Here's that podcast."     │
+│                                                                  │
+└──────────────────────────────────────────────────────────────────┘
+```
+
+**Implementation Options:**
+
+| Option | Description | Effort |
+|--------|-------------|--------|
+| **A) LifeTimeline component** | New section showing capture-throughout-day story BEFORE the phone demo | Medium |
+| **B) Redesign Demo** | Show accumulation + retrieval in one narrative inside the phone | High |
+| **C) Both** | Timeline section + improved demo | High |
+
+**Recommended copy for this section:**
+
+```
+Headline: "Your thoughts happen everywhere."
+Subhead: "In the shower. Walking to your car. Cooking dinner.
+          Trunq catches them all—and brings them back when you need them."
+```
+
+---
+
+### 6. Minor Polish Items
 
 | Item | Suggestion |
 |------|------------|
@@ -104,10 +195,25 @@ This shows:
 | ✅ Done | Demo 3 scenarios | Implemented |
 | ✅ Done | FAQ | Implemented |
 | ✅ Done | Waitlist counter | Implemented |
-| 🟡 P1 | Add workout/habit pattern examples | Recommended |
-| 🟡 P1 | Add fitness use case scenario | Recommended |
-| 🟢 P2 | Demo progress indicator | Nice to have |
+| ✅ Done | Add workout/habit pattern examples | Implemented |
+| ✅ Done | Add fitness use case scenario | Implemented |
+| 🔴 **P0** | **Add "Life Timeline" section - THE BIG PICTURE** | **CRITICAL - Not implemented** |
+| 🟡 P1 | Demo progress indicator | Nice to have |
 | 🟢 P2 | Mobile responsiveness check | Nice to have |
+
+### Why "Life Timeline" is P0
+
+The current website shows **what Trunq does** but not **how it fits into your life**.
+
+Users see:
+- "I'm driving" → calls
+
+Users DON'T understand:
+- That you capture thoughts in the shower, while walking, while cooking
+- That Trunq ACCUMULATES your random thoughts over time
+- That the magic is in the RETRIEVAL of scattered thoughts
+
+**Without this, users think Trunq is just another voice-to-task app.**
 
 ---
 
